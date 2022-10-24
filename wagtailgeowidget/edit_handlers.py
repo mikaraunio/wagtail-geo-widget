@@ -13,7 +13,7 @@ else:
 
 class GoogleMapsPanel(FieldPanel):
     def __init__(self, *args, **kwargs):
-        self.classname = kwargs.pop("classname", "")
+        self.classname = kwargs.get("classname", "")
         self.address_field = kwargs.pop("address_field", "")
         self.zoom_field = kwargs.pop("zoom_field", "")
         self.hide_latlng = kwargs.pop("hide_latlng", False)
@@ -91,7 +91,7 @@ class GeoAddressPanel(FieldPanel):
 
 class LeafletPanel(FieldPanel):
     def __init__(self, *args, **kwargs):
-        self.classname = kwargs.pop("classname", "")
+        self.classname = kwargs.get("classname", "")
         self.address_field = kwargs.pop("address_field", "")
         self.zoom_field = kwargs.pop("zoom_field", "")
         self.hide_latlng = kwargs.pop("hide_latlng", False)
